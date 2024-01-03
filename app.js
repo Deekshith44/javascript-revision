@@ -862,9 +862,109 @@ refers to the globalObject
 */
 
 
+// call , apply , bind method
+
+/* call method invoke directly, we 
+can use this to borrow the function 
 
 
+const student={
+    firstName:"Deekshith",
+    lastName:"Poojary",
+    printFullName:function(){
+        console.log(this.firstName+" "+this.lastName)
+    }
+};
 
+student.printFullName();
+
+
+const student2={
+    firstName:"Yash",
+    lastName:"Gowda"
+};
+
+//Now we want the borrow the function from student to student2 to print the full name
+
+student.printFullName.call(student2); 
+
+// same example in a different method
+
+const student={
+    firstName:"Deekshith",
+    lastName:"Poojary",
+}
+
+const student2={
+    firstName:"Yash",
+    lastName:"Gowda"
+};
+
+
+const printFullName=function(hometown,state){
+    console.log(this.firstName+" "+this.lastName+" from "+hometown+" "+state)
+}
+
+
+printFullName.call(student,"udupi","karnataka");
+printFullName.call(student2,"manipal","karnataka");
+
+//apply
+
+printFullName.apply(student,["udupi","karnataka"]);
+
+//  Bind
+
+//binds the method with object  and return the copy of that.
+
+
+let printMyname=printFullName.bind(student2,"udupi","karnataka");
+
+// console.log(printMyname);  this will return a function
+
+printMyname();  
+
+*/
+
+/* array and object destruction, spread and rest operator
+
+const arr=[89,6,10,2,55,64,32];
+
+//old method 
+//var num1=arr[0];
+//var num2=arr[1];
+//var num3=arr[2];
+
+let [num1,num2,num3,num4]=arr;
+console.log(num1,num3);
+
+//rest operator
+
+//let [n1,n2,n3,...rest]=arr;
+//console.log(n1,n2,n3,rest);
+
+//we want 1st number and rest operator start from 2
+//let[a1,,,...rest]=arr;
+//console.log(a1,rest)
+
+//we want number 10 and rest operator from 55
+//let [,,n3,,...rest]=arr;
+//console.log(n3,rest);
+
+//destructuring object
+
+const obj={
+    name:"adi",
+    age:22,
+    course:"BCA"
+};
+
+//let {name:Myname,age:Myage,course:MyCourse}=obj;
+//console.log("name is " +name+" age is "+age + "course is "+course);
+//console.log(`name is ${Myname} and age is ${Myage} and course is${MyCourse}`);
+
+console.log({...obj,age:29});
+*/
 
 
 
