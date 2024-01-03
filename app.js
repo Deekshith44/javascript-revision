@@ -1,3 +1,4 @@
+
 /*======   async, defer =====
 
 document.getElementById("exm").innerHTML= "HiBro";  */
@@ -757,5 +758,113 @@ let swift= Car('swift');
 //swift.start();
 console.log(this)
 */
+
+
+// global object (this keyword in global space)
+
+//console.log(this);
+
+/*In a global space this keword is going to refer the global object, in browser it is 
+window object and in node.js it is global 
+*/
+
+
+/* inside the function
+"use strict"
+
+console.log(this);  //this will work in stict mode as well
+
+function x(){
+    console.log(this)
+}
+
+x();  */
+/* value of the this keyword in function is undefined if we are using strict mode
+but there is a thing called this substitution,if the value of the 
+this keyword is undefined or null it wil replace it with globalobject if it
+is non-strict mode*/
+
+/* this keyword value depends on how function is called
+"use strict"
+function x(){
+    console.log(this);
+}
+x();
+window.x(); */
+/* this keyword value depends on how the function is called,
+if we are just calling x() in a strict mode than value will be undefined
+but if we call it by using any refernce or any object reference (here it is
+    window.x() ) than we will get a value for this as globalobject in strict mode too */
+
+/* this inside the object method
+
+"use strict"
+const obj={
+    a:10,
+    x:function(){
+      console.log(this)
+    }
+}
+obj.x();  */
+/* if we are creating a function as a part of object than ("x") will be
+called as a method .
+Note: it is in strict mode, and we are calling it using object reference
+*/
+
+/* simple call method
+
+const student={
+    name:"Deekshith",
+    age:20,
+    printName:function(){
+        console.log(this.name)
+    }
+};
+
+const student2={
+    name:"Dev",
+    age:20,
+    
+}
+
+student.printName()
+student.printName.call(student2);  */
+
+/* this keyword inside the arrow function
+"use strict"
+const obj={
+      a:10,
+      x:()=>{             //Enclosing Lexical Context for this arrow is obj and that is present in global space, so it is globalOblect
+        console.log(this)
+      }
+}
+
+obj.x();
+
+const obj2={
+    a:20,
+    x:function(){
+        const y=()=>{     //Enclosing Lexical Context for this arrow is FUNCTION  and that is present inside the obj2, so it is refer to obj2
+            console.log(this)
+        }
+        y();
+    }
+}
+
+obj2.x();  */
+/* arrow function not works similar to other functions, arrow function will
+be Enclosed with Lexical Context.
+lexical context : how it will be written in a code
+(here where the obj is lexically present in a code)
+
+in the 1st example , obj is present in global space , so this keyword
+refers to the globalObject
+*/
+
+
+
+
+
+
 
 
