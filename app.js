@@ -636,7 +636,7 @@ console.log(result5)
 
 //for in and for of for array
 
-const arr=[1,6,3,9,8,2];
+//const arr=[1,6,3,9,8,2];
 /* 
 for(let i of arr){
     console.log(i)
@@ -669,10 +669,93 @@ const students={
 */
 
 
+/*  Day 2   */
+
+//this Keyword
+
+/*
+const person={
+    firstname:"Deekshith",
+    secondname:"poojary",
+    age:22,
+    fullname:function(){
+        return this.firstname +' '+this.secondname;
+    }
+    
+};
+console.log(person.fullname());
+*/
+
+/*
+let counter={
+    count:0,
+    increment:function(){
+        counter.count++;
+    }
+}
+
+counter.increment()
+counter.increment()
+counter.increment()
+
+console.log(counter)
+*/
+
+/*  by creating a factory function same problem
+
+let counter=createCouter();
+let counter1=createCouter() //creating new object for the same function
+
+function createCouter(){
+    return{
+        count:0,
+        increment:function(){
+            this.count++;
+        }
+    }
+}
+
+counter1.increment()
+counter1.increment()
+counter1.increment()
+console.log(counter1)
 
 
+counter.increment();
+console.log(counter);
+*/
+
+/* no object only function
+
+var count=0;
+function increment(){
+    this.count++;
+    console.log(this);
+}
+
+increment();
+increment();
+increment();
+
+console.log(count);
+
+*/
+
+/* this keyword with constructor
+
+function Car(name){
+    this.name=name;
+    this.start=function(){
+        console.log(this.name+' started ')
+        console.log(this);
+    }
+}
 
 
-
+//creating onject using new
+let swift= Car('swift');
+//swift.start();
+console.log(this)
+*/
 
 
