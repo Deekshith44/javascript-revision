@@ -967,4 +967,8 @@ console.log({...obj,age:29});
 */
 
 
+// Day 3-DOM
+
+
+
 
