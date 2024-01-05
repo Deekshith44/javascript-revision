@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <script src="dom.js" defer></script>
+    <style>
+        .bg_color{
+            background-color: red;
+        }
+        .invisible{
+            display: none;
+        }
+        .visible{
+            display: block;
+        }  
+
+
+    </style>
 </head>
 <body>
   <!--   <main>
@@ -22,16 +36,19 @@
 
     <!--Attributes Vs Property-->
     
-       <script src="dom.js" defer></script>
+    
 
     <!--Selecting Multiple element-->   
     <header></header>
     <h1>Second heading</h1>
-    <ul class="main_list">
-        <li class="item" >Item1</li>
-        <li class="item" >Item2</li>
-        <li class="item" >Item3</li>
-    </ul>
-    <input id="id_name" class="class_name" value="My Text"/>
+    <section class="bg_color visible">
+        <ul class="main_list">
+            <li class="item" >Item1</li>
+            <li class="item" >Item2</li>
+            <li class="item" >Item3</li>
+        </ul>
+    </section>
+    <input id="id_name" class="class_name" value="My Text"/> <br><br>
+    <button>Click me</button>
 </body>
 </html>

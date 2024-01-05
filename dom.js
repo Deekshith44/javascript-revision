@@ -128,6 +128,41 @@ ul.nextSibling
 ul.nextElementSibling
 */
 
+/* DOM traversal vs query method
+
+//now we are traversing from body to li
+const ul=document.body.firstElementChild.nextElementSibling
+
+const li=ul.firstElementChild;
+
+//problem is if we cahneg the code later by add <section> above the <ul>, we get the wrong result
+*/
+
+//Styling DOM element
+
+const section=document.querySelector('section');
+const button=document.querySelector('button');
+
+/* button.addEventListener('click',()=>{
+    if(section.className==="bg_color visible"){
+        section.className="invisible"
+        //console.log("Hi")
+    } else {
+        section.className="bg_color visible";
+        //console.log("bi")
+    }
+})  */
+
+/*updated version of above
+
+button.addEventListener('click',()=>{
+    section.classList.toggle('visible');
+    section.classList.toggle('invisible');
+});
+
+*/
+
+
 
 
 
