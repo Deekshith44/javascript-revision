@@ -70,10 +70,47 @@ for(const item2 of storevalue2){
 */
 
 
+//day 3 
+
+/*  
+document.querySelectorAll('li')  //select all and return the node list array object
+
+document.querySelector('li')  //select the 1st matching element
+*/
 
 
+/*
+<body>
+<header></header>
+    <h1>Second heading</h1>
+    <ul class="main_list">
+        <li class="item" >Item1</li>
+        <li class="item" >Item2</li>
+        <li class="item" >Item3</li>
+    </ul>
+</body> */
 
+//from above example we have to access the 2nd li element
 
+/* old method
 
+const output=document.querySelector('ul li:nth-of-type(2)');
+console.log(output)
+*/
+
+/* 2nd method using children property
+const output =document.querySelector('ul')
+console.log(output.children[1])  //return only child elements
+console.log(output.childNodes)  //return nodelist of array object including text and everything
+*/
+
+/* Parent element/node and closest()
+
+//const li=document.querySelector('li');
+
+//li.closest('ul');  //parent
+//li.closest('body'); //ancestor
+
+*/
 
 
