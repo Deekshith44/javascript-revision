@@ -88,6 +88,7 @@ document.querySelector('li')  //select the 1st matching element
         <li class="item" >Item2</li>
         <li class="item" >Item3</li>
     </ul>
+    <input id="id_name" class="class_name" value="My Text"/>
 </body> */
 
 //from above example we have to access the 2nd li element
@@ -112,5 +113,21 @@ console.log(output.childNodes)  //return nodelist of array object including text
 //li.closest('body'); //ancestor
 
 */
+
+/* selecting the sibling
+
+//const li=document.querySelector('li')
+//const ul=li.parentElement;
+//console.log(ul)
+
+//previous sibling
+ul.previousSibling  //u will get a #text its a space
+ul.previousElementSibling //we will get a previous element siblin
+
+ul.nextSibling
+ul.nextElementSibling
+*/
+
+
 
 
