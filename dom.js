@@ -140,8 +140,8 @@ const li=ul.firstElementChild;
 
 //Styling DOM element
 
-const section=document.querySelector('section');
-const button=document.querySelector('button');
+//const section=document.querySelector('section');
+//const button=document.querySelector('button');
 
 /* button.addEventListener('click',()=>{
     if(section.className==="bg_color visible"){
@@ -161,6 +161,35 @@ button.addEventListener('click',()=>{
 });
 
 */
+
+/* Creating and inserting an Element */
+
+//innerHtml
+
+//const ul=document.querySelector('ul');
+//ul.innerHTML="<p>Hi</p>"; //this method delete/replace all the old elements with the new
+
+/* right method 1
+ul.innerHTML=ul.innerHTML+"<p>Hi<p>"; */
+
+/* right method 2
+ul.insertAdjacentHTML('afterend','<li>afterend</li>');
+ul.insertAdjacentHTML('beforeend',"<li>beforeend</li>");
+ul.insertAdjacentHTML('afterbegin',"<li>afterbegin</li>");
+ul.insertAdjacentHTML('beforebegin',"<li>beforebegin</li>")
+*/
+
+//createElement
+
+/* const ul=document.querySelector('ul');
+const newList=document.createElement('li');
+newList.textContent="Item 4";
+ul.appendChild(newList); */
+
+//Inserting DOM element
+//append
+const ul=document.querySelector('ul');
+//ul.append('hi guys'); //append is  used to add the text
 
 
 
