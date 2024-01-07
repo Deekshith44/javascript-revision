@@ -188,8 +188,14 @@ ul.appendChild(newList); */
 
 //Inserting DOM element
 //append
-const ul=document.querySelector('ul');
+//const ul=document.querySelector('ul');
 //ul.append('hi guys'); //append is  used to add the text
+
+//before,after,replacewith
+const ul=document.querySelector('ul');
+const newLi=document.createElement('li');
+ul.appendChild(newLi);
+
 
 
 
