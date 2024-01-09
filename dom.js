@@ -228,6 +228,82 @@ console.log(list.children[1]);
 
 */
 
+/*  accessing parentelement using closest()
+
+const list=document.querySelector('li');
+const output=list.closest('section'); //section is a ancestor of li 
+const output1=list.closest('ul'); //ul is a direct parent of ul
+const output3=list.closest('h1'); //output is null bcz h1 is not a parent nowhere connected to li
+console.log(output);
+
+const list=document.querySelector('header');
+const output=list.closest('body'); 
+console.log(output);
+*/
+
+/* without using closest()
+const li=document.querySelector('li');
+console.log(li.parentElement)
+*/
+
+
+/* selecting sibling elements 
+
+//const ul=document.querySelector('ul');
+
+//const output=ul.previousSibling;  // #text will return as output bcz there is a space
+//console.log(output);
+
+//const output1=ul.previousElementSibling;  //null bcz there is section just behind the ul
+//console.log(output1)
+
+ const section= document.querySelector('section');
+
+const output2=section.nextSibling;
+const output3=section.nextElementSibling;
+console.log(output2);
+console.log(output3); */
+
+
+/* Traversing in DOM
+
+//const list=document.body.firstChild; //returns #text bcz of the space
+const list=document.body.firstElementChild.nextElementSibling;
+
+const x=list.previousElementSibling;
+console.log(x);  */
+
+//creating and inserting elements
+
+//const h1=document.querySelector('h1');
+//h1.innerHTML='<p>Hay its me new line</p>'; //If we just write only these much than new element replace with the old one
+//h1.innerHTML=h1.innerHTML+'<p>Hay its me new line</p>'; //if we want both line ,if we want to keep the old elements as it is
+
+/* 2nd method 
+
+// const ul=document.querySelector('ul');
+
+// ul.insertAdjacentHTML('beforeend', '<p>beforeend</p>')
+// ul.insertAdjacentHTML('beforebegin', '<p>beforebegin</p>')
+// ul.insertAdjacentHTML('afterend', '<p>afterend</p>')
+// ul.insertAdjacentHTML('afterbegin', '<p>afterbegin</p>');
+
+*/
+
+/*
+ul.insertAdjacentHTML('after','<p>after</p>'); //NOTE : after and before These 2 are not works
+ul.insertAdjacentHTML('before','<p>before</p>');
+*/
+
+/* Creating new Element */
+const ulList=document.querySelector('ul'); //Adding to ul
+const newLi=document.createElement('li'); //creating new element li
+ulList.append(newLi);  //appending into main UL
+
+newLi.textContent="Item4";
+//before, after ,replacewith 
+//ulList.lastElementChild.before(newLi);
+ulList.firstElementChild.after(newLi);
 
 
 
