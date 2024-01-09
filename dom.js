@@ -192,9 +192,32 @@ ul.appendChild(newList); */
 //ul.append('hi guys'); //append is  used to add the text
 
 //before,after,replacewith
-const ul=document.querySelector('ul');
-const newLi=document.createElement('li');
-ul.appendChild(newLi);
+
+/* Day 04 Practicing basics */
+
+/*const items=document.getElementById("main_list2");
+const items2=document.getElementsByClassName("main_list");
+console.log(items);
+console.log(items2);
+
+const z=items.childNodes[1];
+console.log(z); */
+
+//const list=document.querySelectorAll('li');
+//console.log(list)
+
+/*
+const input=document.querySelector('input');
+input.setAttribute('type',"my type"); //Adding new attribute
+*/
+
+/* Replacing the existing attribute content
+input.setAttribute('value',"new value");
+input.getAttribute('value');
+input.value=input.getAttribute('value');
+*/
+
+
 
 
 
