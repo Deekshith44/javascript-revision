@@ -217,6 +217,25 @@ input.getAttribute('value');
 input.value=input.getAttribute('value');
 */
 
+/* children vs childNodes
+const list=document.querySelector('ul');
+console.log(list.childNodes);
+console.log(list.children);
+
+const list=document.querySelector('ul');
+console.log(list.childNodes[1]);
+console.log(list.children[1]);
+
+*/
+
+
+
+
+
+
+
+
+
 
 
 
