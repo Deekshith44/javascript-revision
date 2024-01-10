@@ -295,15 +295,39 @@ ul.insertAdjacentHTML('after','<p>after</p>'); //NOTE : after and before These 2
 ul.insertAdjacentHTML('before','<p>before</p>');
 */
 
-/* Creating new Element */
+/* Creating new Element 
 const ulList=document.querySelector('ul'); //Adding to ul
 const newLi=document.createElement('li'); //creating new element li
-ulList.append(newLi);  //appending into main UL
-
+ulList.prepend(newLi);  //prepend adds at the top
 newLi.textContent="Item4";
-//before, after ,replacewith 
-//ulList.lastElementChild.before(newLi);
-ulList.firstElementChild.after(newLi);
+//before 
+ulList.lastElementChild.before(newLi); //adding new Li just before the last element
+
+//after
+const newLi2=document.createElement('li');
+newLi2.textContent="Item5";
+ulList.append(newLi2);
+ulList.firstElementChild.after(newLi2); 
+
+//insertBefore
+const newLi3=document.createElement('li');
+ulList.append(newLi3);
+newLi3.textContent="Item6";
+ulList.insertBefore(newLi3,ulList.children[1]); //insert before the 2nd element 
+
+
+//replacewith
+const newLi4=document.createElement('li');
+newLi4.textContent="Item7";
+//ulList.firstElementChild.replaceWith(newLi4);
+ulList.children[2].replaceWith(newLi4);
+
+//replace child
+const newLi5=document.createElement('li');
+newLi5.textContent="Item8";
+ulList.replaceChild(newLi5,ulList.children[3]);
+*/
+
 
 
 
