@@ -328,7 +328,16 @@ newLi5.textContent="Item8";
 ulList.replaceChild(newLi5,ulList.children[3]);
 */
 
+/* Cloning Node
 
+const list=document.querySelector('ul');
+const newLi=document.createElement('li');
+newLi.textContent="Item10";
+//list.append(newLi);
+const cloneUl=newLi.cloneNode(true);
+//document.body.append(cloneUl); //we can copy/clone it and use anywhere
+list.append(newLi,cloneUl); //same list added again
+*/
 
 
 
