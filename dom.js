@@ -339,7 +339,14 @@ const cloneUl=newLi.cloneNode(true);
 list.append(newLi,cloneUl); //same list added again
 */
 
+/*Removing Elements
 
+const list=document.querySelector('ul');
+//list.remove();  //Method 1
+
+//list.parentElement.removeChild(list); //method 2
+
+*/
 
 
 
