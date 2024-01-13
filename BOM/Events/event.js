@@ -69,15 +69,19 @@ btn1.addEventListener("click",()=>{
 
 
     
-    //above everything can be writtern in single line
-   // body.classList.toggle('dark');
+    
     
 });  */
 
 
+//above everything can be writtern in single line
+/*let btn1=document.querySelector("#button1");
+let body=document.querySelector('body');
+let curMode="light";
+btn1.addEventListener("click",()=>{
+ body.classList.toggle('dark');
 
-
-
+});  */
 
 
 
