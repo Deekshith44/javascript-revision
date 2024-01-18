@@ -158,6 +158,8 @@ productList.render();
 
 */
 
+
+/*
 // Using and connecting Multiple classes
 
 class Product
@@ -248,5 +250,49 @@ class ProductList {
 };
 const productList=new ProductList();
 productList.render();
+*/
+
+
+//Inheritance
+
+class Students{
+    constructor(name,age,cls){
+        this.myname=name;
+        this.myage=age;
+        this.myclass=cls;
+    }
+    //method
+    biodata(){
+        /*console.log(`Hi my self ${this.myname}, and my age id ${this.myage}
+        and class is ${this.myclass}`); */
+       return  `Hi my self ${this.myname}, and my age id ${this.myage}
+        and class is ${this.myclass}`;
+    }
+}
+
+//class inheritance
+
+class Player extends Students
+{
+    constructor(name,age,cls,game){
+        super(name,age,cls);
+        this.mygame=game;
+    }
+    player_biodata(){
+        return `${super.biodata()} and I am a ${this.mygame} player`;
+    }
+}
+
+
+//const student=new Students('Deekshith','22','BCA');
+const player = new Player('Deekshith','22','BCA','Football');
+//student.biodata();
+
+console.log(player.player_biodata());  //we are returning the value so console.log
+
+
+
+
+
 
 
