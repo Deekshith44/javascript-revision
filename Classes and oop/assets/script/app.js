@@ -252,7 +252,7 @@ const productList=new ProductList();
 productList.render();
 */
 
-
+/*
 //Inheritance
 
 class Students{
@@ -263,8 +263,8 @@ class Students{
     }
     //method
     biodata(){
-        /*console.log(`Hi my self ${this.myname}, and my age id ${this.myage}
-        and class is ${this.myclass}`); */
+        // console.log(`Hi my self ${this.myname}, and my age id ${this.myage} and class is ${this.myclass}`); 
+        
        return  `Hi my self ${this.myname}, and my age id ${this.myage}
         and class is ${this.myclass}`;
     }
@@ -289,6 +289,54 @@ const player = new Player('Deekshith','22','BCA','Football');
 //student.biodata();
 
 console.log(player.player_biodata());  //we are returning the value so console.log
+
+*/
+
+//Getter and Setter
+
+class Animal{
+    constructor(name){
+        this._name=name;
+    }
+    fly(){
+        console.log("hay guys");
+    }
+
+    //getter
+    get name(){
+        return this._name;
+    }
+
+    //setter
+    set name(newname){
+        return this._name=newname;
+    }
+}
+
+let animal=new Animal("cat")
+animal.fly();
+console.log(animal.name);
+animal.name="Dog";
+console.log(animal.name);
+
+
+//instanceOperator
+let dog=10;
+console.log( animal instanceof Animal);  //true
+console.log(dog instanceof Animal);  //false
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
