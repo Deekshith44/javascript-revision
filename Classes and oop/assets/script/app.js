@@ -292,7 +292,7 @@ console.log(player.player_biodata());  //we are returning the value so console.l
 
 */
 
-//Getter and Setter
+/*Getter and Setter
 
 class Animal{
     constructor(name){
@@ -325,10 +325,18 @@ let dog=10;
 console.log( animal instanceof Animal);  //true
 console.log(dog instanceof Animal);  //false
 
+*/
 
 
+function func(){
+    if(true){
+        var a=1;
+    }
+    console.log(a)
+}
 
 
+func();
 
 
 
